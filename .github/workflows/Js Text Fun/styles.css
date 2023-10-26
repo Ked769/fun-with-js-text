@@ -1,0 +1,67 @@
+*{
+    background-color: black;
+    padding: 0;
+}
+h1{
+    color: white;
+    font-size: 39vh;
+    font-family: "Space mono", monospace;
+}
+.center{
+    justify-content: center;
+    text-align: center;
+}
+#blob{
+    height: 100px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50%, -50%;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+    filter: blur(30px);
+}
+#blur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(70px);
+}
+@keyframes rotate{
+    from{
+        background: linear-gradient(
+        to bottom,
+        aquamarine,
+        purple);
+        rotate: 0deg;
+    }
+    25%{
+        background: purple;
+    }
+    37.5%{
+        background: linear-gradient(
+        to bottom,
+        purple,
+        pink);
+    }
+    50%{
+        background-color: pink;
+        scale: 1 1.5;
+    }
+    
+    62.5%{
+        background: linear-gradient(
+        to bottom,
+        pink,
+        aquamarine);
+    }
+    75%{
+        background-color: aquamarine;
+    }
+
+    to{
+        rotate: 360deg;
+    }
+}
